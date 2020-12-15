@@ -1,0 +1,50 @@
+.page-title {
+  display: block !important;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.profile-name {
+  display: block !important;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: auto;
+}
+
+.ui.teal.button:focus,
+.ui.teal.buttons .button:focus {
+  background-color: red;
+}
+
+.profile-cover-pic-container {
+  background-image: url(images/pexels-maxime-francis-2246476.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.profile-pic {
+  margin-top: -150px;
+  border: 5px solid white;
+}
+
+.profile-description {
+  font-size: 14pt;
+  margin: 20px auto 0 auto;
+  color: gray;
+  text-align: center;
+  max-width: 700px;
+}
+
+.footer{
+  margin-top: 30px;
+  text-align: center;
+}
