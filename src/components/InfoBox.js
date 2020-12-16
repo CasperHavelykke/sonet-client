@@ -4,7 +4,6 @@ import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks';
 
 import { AuthContext } from '../context/auth';
-import { useForm } from '../util/hooks';
 import MyPopup from '../util/MyPopup';
 
 

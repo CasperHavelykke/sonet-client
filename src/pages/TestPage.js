@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { useQuery, useMutation } from '@apollo/react-hooks';
-import { Card, Divider, Form, Grid } from 'semantic-ui-react';
+import { useQuery } from '@apollo/react-hooks';
+import { Card, Divider, Grid } from 'semantic-ui-react';
 import gql from 'graphql-tag';
 
 import { AuthContext } from '../context/auth';
