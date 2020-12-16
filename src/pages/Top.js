@@ -22,7 +22,10 @@ function Top(){
       </Grid.Row>
       <Grid.Row>
         {loading ? (
+          <div>
           <h1>Loading posts..</h1>
+          <p>May take a while. (refresh won't work unless on the "top" page)</p>
+          </div>
         ) : (
           <Transition.Group>
             {posts &&

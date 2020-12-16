@@ -96,8 +96,9 @@ function Profile(props) {
 
         profileMarkup = (
             <Grid columns={1}>
-                <Grid.Row className="profile-cover-pic-container">
-                    
+                <Grid.Row style={{ padding: 20, alignContent: 'end'}} className="profile-cover-pic-container">
+                <p style={{ color: 'white' }}><b>images not yet replaceable</b></p>
+
                 </Grid.Row>
                 <Grid.Row>
                     <Image 

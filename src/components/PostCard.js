@@ -36,7 +36,8 @@ function PostCard({
         <Image
           floated="right"
           size="mini"
-          src="https://react.semantic-ui.com/images/avatar/large/molly.png"
+          rounded
+          src="http://localhost:5000/images/unsplash-profile-pic.jpg"
         />
         <Card.Header as={Link} to={`/profile/${user}`}>{username}</Card.Header>
         <Card.Meta as={Link} to={`/posts/${id}`}>
