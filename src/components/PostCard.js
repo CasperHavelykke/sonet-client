@@ -37,7 +37,7 @@ function PostCard({
           floated="right"
           size="mini"
           rounded
-          src="https://pure-citadel-69042.herokuapp.com/images/unsplash-profile-pic.jpg"
+          src="http://localhost:5000/images/unsplash-profile-pic.jpg"
         />
         <Card.Header as={Link} to={`/profile/${user}`}>{username}</Card.Header>
         <Card.Meta as={Link} to={`/posts/${id}`}>

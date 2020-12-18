@@ -1,23 +1,12 @@
 import React, { useContext } from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import { Card, Divider, Grid } from 'semantic-ui-react';
+import { Button, Card, Divider, Grid } from 'semantic-ui-react';
 import gql from 'graphql-tag';
+import { Link } from 'react-router-dom';
 
 import { AuthContext } from '../context/auth';
 
 function TestPage() {
-    const { AuthUser } = useContext(AuthContext);
-
-    const userId = AuthUser.id;
-
-    const { loading, data: { getUser } = {} } = useQuery( FETCH_USER_QUERY, {
-        update(proxy, result){
-            console.log(result)
-        },
-        variables: {
-          userId
-        }
-    });
 
     /*
     const [values, setValues] = useState({
@@ -56,9 +45,69 @@ function TestPage() {
 */ 
 
       let TestPage;
-      if(loading){
+      if(false){
         TestPage = (<p>Page Loading...</p>)
       } else {
+
+        TestPage = (
+        <Grid columns={1}>
+            <Grid.Column>
+            <Grid.Row className="page-title">
+                <h1>Settings</h1>
+            </Grid.Row>
+            <Grid.Row>
+                <div  className="profile-description">
+                <p>
+                    This is where the settings would be <br/>
+                    This website is part of my bachelors project.
+                    The project ends January 8th 2021
+                </p>
+                </div>
+            </Grid.Row>
+            <Grid.Row style={{ marginBottom: 120, marginTop: 100}}>
+                <Button
+                size="huge"
+                color="red"
+                as={Link}
+                to="/login"
+                >
+                    Login
+                </Button>
+                
+                <Button 
+                size="huge"
+                color="red"
+                as={Link}
+                to="/register"
+                >
+                    Register
+                </Button>
+            </Grid.Row>
+            </Grid.Column>
+        </Grid>
+        )
+      }
+
+    return TestPage;
+}
+
+/*
+
+    const { AuthUser } = useContext(AuthContext);
+
+    const userId = AuthUser.id;
+
+    const { loading, data: { getUser } = {} } = useQuery( FETCH_USER_QUERY, {
+        update(proxy, result){
+            console.log(result)
+        },
+        variables: {
+          userId
+        }
+    });
+            
+
+    
         const {
             username,
             email,
@@ -76,21 +125,8 @@ function TestPage() {
             job
         } = getUser;
 
-        TestPage = (
-        <Grid columns={1}>
-            <Grid.Column>
-            <Grid.Row className="page-title">
-                <h1>Settings</h1>
-            </Grid.Row>
-            <Grid.Row>
-                <div  className="profile-description">
-                <p>
-                    This is where the settings would be <br/>
-                    This website is part of my bachelors project.
-                    The project ends January 8th 2021
-                </p>
-                </div>
-            </Grid.Row>
+
+
             {AuthUser && AuthUser.username === username && (
             <Grid.Row >
                 <Card fluid style={{marginBottom: 40, marginTop: 40, maxWidth: 500, padding: 20}}>
@@ -118,14 +154,8 @@ function TestPage() {
                 </Card>
             </Grid.Row>
             )}
-            </Grid.Column>
-        </Grid>
-        )
-      }
 
-    return TestPage;
-}
-
+*/
 
 const FETCH_USER_QUERY = gql`
   query($userId: ID!){

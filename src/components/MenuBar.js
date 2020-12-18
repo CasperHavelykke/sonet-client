@@ -14,7 +14,7 @@ function MenuBar() {
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
-  const menuBar = AuthUser ? (
+  const menuBar = /*AuthUser ?*/ (
     <Menu pointing secondary fluid className="five item" size="massive" color="red">
 
       <Menu.Item
@@ -42,7 +42,8 @@ function MenuBar() {
         color="red"
         />
       </Menu.Item>
-
+      
+      {AuthUser ? 
       <Menu.Item 
       active={activeItem === 'profile' } 
       name="profile" 
@@ -55,6 +56,20 @@ function MenuBar() {
         color="red"
         />
       </Menu.Item>
+      : 
+        <Menu.Item 
+        active={activeItem === 'profile' } 
+        name="profile" 
+        onClick={handleItemClick}
+        as={Link} 
+        to={`/profile/5fdce284158b4c0d68cfba50`}>
+          <Icon 
+          className="user link big icon" 
+          size="big"  
+          color="red"
+          />
+        </Menu.Item>
+      }
 
       <Menu.Item
       active={activeItem === 'top' } 
@@ -79,7 +94,7 @@ function MenuBar() {
     </Menu>
 
 
-  ) : (
+/*  ) : (
 
 
     <Menu pointing secondary size="massive" color="red">
@@ -108,8 +123,9 @@ function MenuBar() {
           to="/register"
         />
       </Menu.Menu>
-    </Menu>
+    </Menu>*/
   );
+
 
   return menuBar;
 }

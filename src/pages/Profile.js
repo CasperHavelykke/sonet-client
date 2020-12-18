@@ -106,7 +106,7 @@ function Profile(props) {
                         size="small" 
                         avatar
                         centered
-                        src="https://pure-citadel-69042.herokuapp.com/images/unsplash-profile-pic.jpg"
+                        src="http://localhost:5000/images/unsplash-profile-pic.jpg"
                     />
                 </Grid.Row>
                 <Grid.Row className="profile-name">
