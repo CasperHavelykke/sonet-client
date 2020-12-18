@@ -1,10 +1,12 @@
-import React, { useContext } from 'react';
-import { useQuery } from '@apollo/react-hooks';
-import { Button, Card, Divider, Grid } from 'semantic-ui-react';
-import gql from 'graphql-tag';
+import React from 'react';
+/* import { useQuery } from '@apollo/react-hooks';*/
+import { Button, Grid } from 'semantic-ui-react';
+/* import gql from 'graphql-tag';*/
 import { Link } from 'react-router-dom';
-
+/*
 import { AuthContext } from '../context/auth';
+*/ 
+ /* CHANGES */
 
 function TestPage() {
 
@@ -65,14 +67,6 @@ function TestPage() {
                 </div>
             </Grid.Row>
             <Grid.Row style={{ marginBottom: 120, marginTop: 100}}>
-                <Button
-                size="huge"
-                color="red"
-                as={Link}
-                to="/login"
-                >
-                    Login
-                </Button>
                 
                 <Button 
                 size="huge"
@@ -82,6 +76,16 @@ function TestPage() {
                 >
                     Register
                 </Button>
+
+                <Button
+                size="huge"
+                color="red"
+                as={Link}
+                to="/login"
+                >
+                    Login
+                </Button>
+                
             </Grid.Row>
             </Grid.Column>
         </Grid>
@@ -157,6 +161,7 @@ function TestPage() {
 
 */
 
+/*
 const FETCH_USER_QUERY = gql`
   query($userId: ID!){
     getUser(userId: $userId) {
@@ -178,5 +183,6 @@ const FETCH_USER_QUERY = gql`
     }
   }
 `;
+*/
 
 export default TestPage;
