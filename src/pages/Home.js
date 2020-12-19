@@ -32,7 +32,7 @@ function Home() {
         {loading ? (
           <div>
           <h1>Loading posts..</h1>
-          <p>May take a while. (refresh won't work unless on the "top" page)</p>
+          <p>May take a while, the first time it loads</p>
           </div>
         ) : (
           <Transition.Group>
