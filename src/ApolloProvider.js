@@ -14,7 +14,7 @@ const httpLink = createHttpLink({
 */
 
 const uploadLink = createUploadLink({
-  uri: 'https://pure-citadel-69042.herokuapp.com'
+  uri: 'https://pure-citadel-69042.herokuapp.com/graphql'
 });
 
 const authLink = setContext(() => {
