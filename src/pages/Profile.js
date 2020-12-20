@@ -115,7 +115,7 @@ function Profile(props) {
                       <h1>{firstName} {middleNames} {lastName}</h1>
                     )}
                     {AuthUser && AuthUser.username === username &&(
-                      <MyPopup content="Edit name" >
+                      <MyPopup content="Change name" >
                           <Button onClick={toggleName} size="mini" className="circular ui icon" style={{ marginBottom: 10 }} >
                               <Icon className="edit"></Icon>
                           </Button>
